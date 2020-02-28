@@ -44,3 +44,17 @@ php -S localhost:8888
     RewriteRule ^ index.php [QSA,L]
 </IfModule>
 ```
+
+sub domains
+```
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{HTTP_HOST} ^www.a.com$ [NC]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ a.php [QSA,L]
+
+    RewriteCond %{HTTP_HOST} ^www.b.com$ [NC]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ b.php [QSA,L]
+</IfModule>
+```
