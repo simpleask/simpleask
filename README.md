@@ -35,3 +35,12 @@ composer require laminas/laminas-diactoros
 cd public/
 php -S localhost:8888
 ```
+
+.htaccess
+```
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
+```
