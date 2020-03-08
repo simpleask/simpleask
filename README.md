@@ -2,6 +2,7 @@
 
 ```
 sudo apt install php7.2-cli
+sudo apt install php7.2-zip
 ```
 
 
