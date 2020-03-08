@@ -3,6 +3,8 @@
 ```
 sudo apt install php7.2-cli
 sudo apt install php7.2-zip
+sudo apt install php7.2-mbstring
+sudo apt install php7.2-dom
 ```
 
 
@@ -31,6 +33,16 @@ composer require guzzlehttp/psr7 http-interop/http-factory-guzzle
 composer require laminas/laminas-diactoros
 ```
 
+```
+composer global require laravel/installer
+
+```
+
+$HOME/.config/composer/vendor/bin or $HOME/.composer/vendor/bin
+
+```
+laravel new xxx
+```
 
 ```
 cd public/
